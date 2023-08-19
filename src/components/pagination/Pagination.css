@@ -1,0 +1,39 @@
+.pagination-container {
+  margin-top: -80px;
+  align-self: center;
+}
+
+.page-number {
+  padding: 5px 11px;
+  border: 1px solid;
+  border-radius: 50%;
+  background-color: #0284c7;
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.selected-page {
+  background-color: white !important;
+  color: #0284c7;
+}
+
+.chevron-btn {
+  margin-top: -6px !important;
+  margin-right: 10px !important;
+  padding: 4.5px !important;
+  background-color: #0284c7 !important;
+}
+
+.chevron-btn svg g {
+  fill: white;
+}
+
+.Mui-disabled {
+  background-color: #f5f5f5 !important;
+  border: 1px solid rgb(189, 186, 186) !important;
+}
+
+.Mui-disabled svg g {
+  fill: gray !important;
+}
