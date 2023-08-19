@@ -1,0 +1,20 @@
+.usersTableFooter {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.noDataFound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .usersTableFooter {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

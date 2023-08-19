@@ -40,6 +40,7 @@ const Pagination = ({ page, setPage, filteredData }) => {
               page === index + 1 ? "page-number selected-page" : "page-number"
             }
             onClick={() => selectedPageHandler(index + 1)}
+            key={index}
           >
             {index + 1}
           </span>

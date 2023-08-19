@@ -6,12 +6,7 @@ import EditIcon from "../assets/icons/EditIcon";
 import DeleteIcon from "../assets/icons/DeleteIcon";
 import SaveIcon from "../assets/icons/SaveIcon";
 
-const SingleUser = ({
-  user,
-  selectedRows,
-  setSelectedRows,
-  toggleCheckBoxes,
-}) => {
+const SingleUser = ({ user, toggleCheckBoxes }) => {
   const { editUser, deleteUser } = AdminState();
   const [inputName, setInputName] = useState();
   const [inputEmail, setInputEmail] = useState();
@@ -35,13 +30,6 @@ const SingleUser = ({
     setInputEmail("");
     setInputRole("");
   };
-
-  //   const handleSelectedRows = (e) => {
-  //     if (e.target.checked) {
-  //       setSelectedRows([...selectedRows, user.id]);
-  //     }
-  //   };
-  console.log(selectedRows);
 
   return (
     <TableRow key={user.id}>

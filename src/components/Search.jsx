@@ -5,20 +5,8 @@ import { AdminState } from "../context/AdminContext";
 
 const Search = () => {
   const { userData } = AdminState();
-  console.log(userData);
 
-  const [filteredData, setFilteredData] = useState(userData);
-
-  const filterDataHandler = (searchText) => {
-    setFilteredData(
-      userData?.filter(
-        (user) =>
-          user.name.includes(searchText) ||
-          user.email.includes(searchText) ||
-          user.role.includes(searchText)
-      )
-    );
-  };
+  const [searchString, setSearchString] = useState("");
 
   return (
     <Container>
@@ -27,11 +15,9 @@ const Search = () => {
         style={{ width: "100%" }}
         fullWidth
         label="Search by name, email or role"
-        onChange={(event) => filterDataHandler(event.target.value)}
+        onChange={(event) => setSearchString(event.target.value.toLowerCase())}
       />
-      <UsersTable
-        filteredData={filteredData.length ? filteredData : userData}
-      />
+      <UsersTable searchString={searchString} />
     </Container>
   );
 };
